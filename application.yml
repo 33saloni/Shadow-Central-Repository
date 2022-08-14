@@ -10,7 +10,7 @@ spring:
       routes:
       - id: "backend"
         predicates:
-        
+        - Path=/backend/**
         uri: lb://BACKEND
       - id: "backend"
         predicates:
