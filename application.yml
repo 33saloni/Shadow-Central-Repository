@@ -11,10 +11,14 @@ spring:
       - id: "backend"
         predicates:
         - Path=/backend/**
+      - filters:
+        - StripPrefix=1
         uri: lb://BACKEND
       - id: "backend"
         predicates:
         - Path=/frontend/**
+      - filters:
+        - StripPrefix=1
         uri: lb://FRONTEND
   profiles:
   - gateway
